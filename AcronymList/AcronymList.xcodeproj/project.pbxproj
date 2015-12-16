@@ -26,6 +26,9 @@
 		68DD84EC1C2219AC0050BA2C /* NSString+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84EB1C2219AC0050BA2C /* NSString+Utility.m */; };
 		68DD84EF1C2219BC0050BA2C /* UIColor+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84EE1C2219BC0050BA2C /* UIColor+Utility.m */; };
 		68DD84F21C2219CB0050BA2C /* UIFont+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84F11C2219CB0050BA2C /* UIFont+Utility.m */; };
+		68DD84F91C2220260050BA2C /* Proxima_Nova_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84F61C2220260050BA2C /* Proxima_Nova_Bold.otf */; };
+		68DD84FA1C2220260050BA2C /* Proxima_Nova_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84F71C2220260050BA2C /* Proxima_Nova_Light.otf */; };
+		68DD84FB1C2220260050BA2C /* Proxima_Nova_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84F81C2220260050BA2C /* Proxima_Nova_Regular.otf */; };
 		E62A627607693EC6B23C746F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501C010132FC8250A9AA9C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +90,9 @@
 		68DD84EE1C2219BC0050BA2C /* UIColor+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Utility.m"; sourceTree = "<group>"; };
 		68DD84F01C2219CB0050BA2C /* UIFont+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Utility.h"; sourceTree = "<group>"; };
 		68DD84F11C2219CB0050BA2C /* UIFont+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Utility.m"; sourceTree = "<group>"; };
+		68DD84F61C2220260050BA2C /* Proxima_Nova_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Proxima_Nova_Bold.otf; sourceTree = "<group>"; };
+		68DD84F71C2220260050BA2C /* Proxima_Nova_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Proxima_Nova_Light.otf; sourceTree = "<group>"; };
+		68DD84F81C2220260050BA2C /* Proxima_Nova_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Proxima_Nova_Regular.otf; sourceTree = "<group>"; };
 		CC22DEC8F0CB0A2FD0FAE132 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +180,7 @@
 		68DD84831C220FFF0050BA2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				68DD84F31C2220260050BA2C /* Resources */,
 				68DD848F1C220FFF0050BA2C /* Assets.xcassets */,
 				68DD84911C220FFF0050BA2C /* LaunchScreen.storyboard */,
 				68DD84941C220FFF0050BA2C /* Info.plist */,
@@ -363,6 +370,32 @@
 			path = "UIFont+Utility";
 			sourceTree = "<group>";
 		};
+		68DD84F31C2220260050BA2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84F41C2220260050BA2C /* CustomFonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		68DD84F41C2220260050BA2C /* CustomFonts */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84F51C2220260050BA2C /* Proxima */,
+			);
+			path = CustomFonts;
+			sourceTree = "<group>";
+		};
+		68DD84F51C2220260050BA2C /* Proxima */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84F61C2220260050BA2C /* Proxima_Nova_Bold.otf */,
+				68DD84F71C2220260050BA2C /* Proxima_Nova_Light.otf */,
+				68DD84F81C2220260050BA2C /* Proxima_Nova_Regular.otf */,
+			);
+			path = Proxima;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,6 +505,9 @@
 				68DD84931C220FFF0050BA2C /* LaunchScreen.storyboard in Resources */,
 				68DD84901C220FFF0050BA2C /* Assets.xcassets in Resources */,
 				68DD848E1C220FFF0050BA2C /* Main.storyboard in Resources */,
+				68DD84FA1C2220260050BA2C /* Proxima_Nova_Light.otf in Resources */,
+				68DD84F91C2220260050BA2C /* Proxima_Nova_Bold.otf in Resources */,
+				68DD84FB1C2220260050BA2C /* Proxima_Nova_Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

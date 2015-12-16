@@ -10,4 +10,7 @@
 
 @interface UIFont (Utility)
 
++ (UIFont *)ac_standardTextFont;
++ (UIFont *)ac_searchFieldFont;
+
 @end
