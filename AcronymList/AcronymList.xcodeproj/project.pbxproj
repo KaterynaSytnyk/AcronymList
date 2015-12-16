@@ -15,6 +15,11 @@
 		68DD849E1C220FFF0050BA2C /* AcronymListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD849D1C220FFF0050BA2C /* AcronymListTests.m */; };
 		68DD84A91C220FFF0050BA2C /* AcronymListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84A81C220FFF0050BA2C /* AcronymListUITests.m */; };
 		68DD84BF1C2214030050BA2C /* AcronymListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84BE1C2214030050BA2C /* AcronymListViewController.m */; };
+		68DD84C71C2214E20050BA2C /* AppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84C61C2214E20050BA2C /* AppearanceManager.m */; };
+		68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84C91C2214F00050BA2C /* LoggingManager.m */; };
+		68DD84CD1C2215010050BA2C /* ParsingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84CC1C2215010050BA2C /* ParsingManager.m */; };
+		68DD84D01C22150C0050BA2C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84CF1C22150C0050BA2C /* NetworkManager.m */; };
+		68DD84D31C2215160050BA2C /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84D21C2215160050BA2C /* DataManager.m */; };
 		E62A627607693EC6B23C746F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501C010132FC8250A9AA9C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +59,16 @@
 		68DD84AA1C220FFF0050BA2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68DD84BD1C2214030050BA2C /* AcronymListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymListViewController.h; sourceTree = "<group>"; };
 		68DD84BE1C2214030050BA2C /* AcronymListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymListViewController.m; sourceTree = "<group>"; };
+		68DD84C51C2214E20050BA2C /* AppearanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceManager.h; sourceTree = "<group>"; };
+		68DD84C61C2214E20050BA2C /* AppearanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceManager.m; sourceTree = "<group>"; };
+		68DD84C81C2214F00050BA2C /* LoggingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggingManager.h; sourceTree = "<group>"; };
+		68DD84C91C2214F00050BA2C /* LoggingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggingManager.m; sourceTree = "<group>"; };
+		68DD84CB1C2215010050BA2C /* ParsingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsingManager.h; sourceTree = "<group>"; };
+		68DD84CC1C2215010050BA2C /* ParsingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingManager.m; sourceTree = "<group>"; };
+		68DD84CE1C22150C0050BA2C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		68DD84CF1C22150C0050BA2C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		68DD84D11C2215160050BA2C /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		68DD84D21C2215160050BA2C /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		CC22DEC8F0CB0A2FD0FAE132 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +191,11 @@
 		68DD84B91C2213C30050BA2C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				68DD84C01C2214C80050BA2C /* AppearanceManager */,
+				68DD84C11C2214C80050BA2C /* LoggingManager */,
+				68DD84C21C2214C80050BA2C /* ParsingManager */,
+				68DD84C31C2214C80050BA2C /* NetworkManager */,
+				68DD84C41C2214C80050BA2C /* DataManager */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -194,6 +214,51 @@
 				68DD84BE1C2214030050BA2C /* AcronymListViewController.m */,
 			);
 			path = AcronymListViewController;
+			sourceTree = "<group>";
+		};
+		68DD84C01C2214C80050BA2C /* AppearanceManager */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84C51C2214E20050BA2C /* AppearanceManager.h */,
+				68DD84C61C2214E20050BA2C /* AppearanceManager.m */,
+			);
+			path = AppearanceManager;
+			sourceTree = "<group>";
+		};
+		68DD84C11C2214C80050BA2C /* LoggingManager */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84C81C2214F00050BA2C /* LoggingManager.h */,
+				68DD84C91C2214F00050BA2C /* LoggingManager.m */,
+			);
+			path = LoggingManager;
+			sourceTree = "<group>";
+		};
+		68DD84C21C2214C80050BA2C /* ParsingManager */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84CB1C2215010050BA2C /* ParsingManager.h */,
+				68DD84CC1C2215010050BA2C /* ParsingManager.m */,
+			);
+			path = ParsingManager;
+			sourceTree = "<group>";
+		};
+		68DD84C31C2214C80050BA2C /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84CE1C22150C0050BA2C /* NetworkManager.h */,
+				68DD84CF1C22150C0050BA2C /* NetworkManager.m */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		68DD84C41C2214C80050BA2C /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84D11C2215160050BA2C /* DataManager.h */,
+				68DD84D21C2215160050BA2C /* DataManager.m */,
+			);
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -378,7 +443,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				68DD84BF1C2214030050BA2C /* AcronymListViewController.m in Sources */,
+				68DD84D01C22150C0050BA2C /* NetworkManager.m in Sources */,
+				68DD84C71C2214E20050BA2C /* AppearanceManager.m in Sources */,
+				68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */,
 				68DD84881C220FFF0050BA2C /* AppDelegate.m in Sources */,
+				68DD84D31C2215160050BA2C /* DataManager.m in Sources */,
+				68DD84CD1C2215010050BA2C /* ParsingManager.m in Sources */,
 				68DD84851C220FFF0050BA2C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
