@@ -22,6 +22,7 @@
 		68DD84D71C2216E90050BA2C /* AcronymMeaningTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */; };
 		68DD84DC1C2217D10050BA2C /* Acronym.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84DB1C2217D10050BA2C /* Acronym.m */; };
 		68DD84DF1C2217DF0050BA2C /* AcronymMeaning.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84DE1C2217DF0050BA2C /* AcronymMeaning.m */; };
+		68DD84E51C22187E0050BA2C /* AcronymMeaningTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84E41C22187E0050BA2C /* AcronymMeaningTableViewCell.m */; };
 		E62A627607693EC6B23C746F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501C010132FC8250A9AA9C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +76,8 @@
 		68DD84DB1C2217D10050BA2C /* Acronym.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Acronym.m; sourceTree = "<group>"; };
 		68DD84DD1C2217DF0050BA2C /* AcronymMeaning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymMeaning.h; sourceTree = "<group>"; };
 		68DD84DE1C2217DF0050BA2C /* AcronymMeaning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymMeaning.m; sourceTree = "<group>"; };
+		68DD84E31C22187E0050BA2C /* AcronymMeaningTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymMeaningTableViewCell.h; sourceTree = "<group>"; };
+		68DD84E41C22187E0050BA2C /* AcronymMeaningTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymMeaningTableViewCell.m; sourceTree = "<group>"; };
 		CC22DEC8F0CB0A2FD0FAE132 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -150,6 +153,7 @@
 				68DD84871C220FFF0050BA2C /* AppDelegate.m */,
 				68DD848C1C220FFF0050BA2C /* Main.storyboard */,
 				68DD84BA1C2213C30050BA2C /* Models */,
+				68DD84E01C2218390050BA2C /* Views */,
 				68DD84B61C2213C30050BA2C /* ViewControllers */,
 				68DD84B91C2213C30050BA2C /* Managers */,
 				68DD84831C220FFF0050BA2C /* Supporting Files */,
@@ -285,6 +289,31 @@
 				68DD84DB1C2217D10050BA2C /* Acronym.m */,
 			);
 			path = Acronym;
+			sourceTree = "<group>";
+		};
+		68DD84E01C2218390050BA2C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84E11C22186C0050BA2C /* TableViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		68DD84E11C22186C0050BA2C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84E21C22186C0050BA2C /* AcronymMeaningTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		68DD84E21C22186C0050BA2C /* AcronymMeaningTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84E31C22187E0050BA2C /* AcronymMeaningTableViewCell.h */,
+				68DD84E41C22187E0050BA2C /* AcronymMeaningTableViewCell.m */,
+			);
+			path = AcronymMeaningTableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -475,6 +504,7 @@
 				68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */,
 				68DD84881C220FFF0050BA2C /* AppDelegate.m in Sources */,
 				68DD84D31C2215160050BA2C /* DataManager.m in Sources */,
+				68DD84E51C22187E0050BA2C /* AcronymMeaningTableViewCell.m in Sources */,
 				68DD84D71C2216E90050BA2C /* AcronymMeaningTableViewController.m in Sources */,
 				68DD84CD1C2215010050BA2C /* ParsingManager.m in Sources */,
 				68DD84851C220FFF0050BA2C /* main.m in Sources */,
