@@ -1,5 +1,5 @@
 //
-//  AppearanceManager.h
+//  NSString+Utility.h
 //  AcronymList
 //
 //  Created by Kateryna Sytnyk on 12/16/15.
@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface AppearanceManager : NSObject
-
-+ (void)setupAppearanceForApplication;
+@interface NSString (Utility)
 
 @end

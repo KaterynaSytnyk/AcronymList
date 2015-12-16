@@ -7,7 +7,13 @@
 //
 
 #import "AppearanceManager.h"
+#import "UIColor+Utility.h"
+#import "UIFont+Utility.h"
 
 @implementation AppearanceManager
+
++ (void)setupAppearanceForApplication {
+//    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor darkGrayColor]];
+}
 
 @end
