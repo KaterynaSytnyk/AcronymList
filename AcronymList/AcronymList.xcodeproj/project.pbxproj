@@ -14,12 +14,12 @@
 		68DD84931C220FFF0050BA2C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84911C220FFF0050BA2C /* LaunchScreen.storyboard */; };
 		68DD849E1C220FFF0050BA2C /* AcronymListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD849D1C220FFF0050BA2C /* AcronymListTests.m */; };
 		68DD84A91C220FFF0050BA2C /* AcronymListUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84A81C220FFF0050BA2C /* AcronymListUITests.m */; };
-		68DD84BF1C2214030050BA2C /* AcronymListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84BE1C2214030050BA2C /* AcronymListViewController.m */; };
 		68DD84C71C2214E20050BA2C /* AppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84C61C2214E20050BA2C /* AppearanceManager.m */; };
 		68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84C91C2214F00050BA2C /* LoggingManager.m */; };
 		68DD84CD1C2215010050BA2C /* ParsingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84CC1C2215010050BA2C /* ParsingManager.m */; };
 		68DD84D01C22150C0050BA2C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84CF1C22150C0050BA2C /* NetworkManager.m */; };
 		68DD84D31C2215160050BA2C /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84D21C2215160050BA2C /* DataManager.m */; };
+		68DD84D71C2216E90050BA2C /* AcronymMeaningTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */; };
 		E62A627607693EC6B23C746F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501C010132FC8250A9AA9C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +57,6 @@
 		68DD84A41C220FFF0050BA2C /* AcronymListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AcronymListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		68DD84A81C220FFF0050BA2C /* AcronymListUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AcronymListUITests.m; sourceTree = "<group>"; };
 		68DD84AA1C220FFF0050BA2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		68DD84BD1C2214030050BA2C /* AcronymListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymListViewController.h; sourceTree = "<group>"; };
-		68DD84BE1C2214030050BA2C /* AcronymListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymListViewController.m; sourceTree = "<group>"; };
 		68DD84C51C2214E20050BA2C /* AppearanceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppearanceManager.h; sourceTree = "<group>"; };
 		68DD84C61C2214E20050BA2C /* AppearanceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppearanceManager.m; sourceTree = "<group>"; };
 		68DD84C81C2214F00050BA2C /* LoggingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoggingManager.h; sourceTree = "<group>"; };
@@ -69,6 +67,8 @@
 		68DD84CF1C22150C0050BA2C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		68DD84D11C2215160050BA2C /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		68DD84D21C2215160050BA2C /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		68DD84D51C2216E90050BA2C /* AcronymMeaningTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymMeaningTableViewController.h; sourceTree = "<group>"; };
+		68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymMeaningTableViewController.m; sourceTree = "<group>"; };
 		CC22DEC8F0CB0A2FD0FAE132 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -183,7 +183,7 @@
 		68DD84B61C2213C30050BA2C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				68DD84BC1C2214030050BA2C /* AcronymListViewController */,
+				68DD84D41C2216E90050BA2C /* AcronymMeaningTableViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -205,15 +205,6 @@
 			children = (
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		68DD84BC1C2214030050BA2C /* AcronymListViewController */ = {
-			isa = PBXGroup;
-			children = (
-				68DD84BD1C2214030050BA2C /* AcronymListViewController.h */,
-				68DD84BE1C2214030050BA2C /* AcronymListViewController.m */,
-			);
-			path = AcronymListViewController;
 			sourceTree = "<group>";
 		};
 		68DD84C01C2214C80050BA2C /* AppearanceManager */ = {
@@ -259,6 +250,15 @@
 				68DD84D21C2215160050BA2C /* DataManager.m */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		68DD84D41C2216E90050BA2C /* AcronymMeaningTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84D51C2216E90050BA2C /* AcronymMeaningTableViewController.h */,
+				68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */,
+			);
+			path = AcronymMeaningTableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,12 +442,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68DD84BF1C2214030050BA2C /* AcronymListViewController.m in Sources */,
 				68DD84D01C22150C0050BA2C /* NetworkManager.m in Sources */,
 				68DD84C71C2214E20050BA2C /* AppearanceManager.m in Sources */,
 				68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */,
 				68DD84881C220FFF0050BA2C /* AppDelegate.m in Sources */,
 				68DD84D31C2215160050BA2C /* DataManager.m in Sources */,
+				68DD84D71C2216E90050BA2C /* AcronymMeaningTableViewController.m in Sources */,
 				68DD84CD1C2215010050BA2C /* ParsingManager.m in Sources */,
 				68DD84851C220FFF0050BA2C /* main.m in Sources */,
 			);

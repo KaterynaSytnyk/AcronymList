@@ -1,5 +1,5 @@
 //
-//  AcronymListViewController.h
+//  AcronymMeaningTableViewController.h
 //  AcronymList
 //
 //  Created by Kateryna Sytnyk on 12/16/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AcronymListViewController : UIViewController
+@interface AcronymMeaningTableViewController : UITableViewController
 
 
 @end

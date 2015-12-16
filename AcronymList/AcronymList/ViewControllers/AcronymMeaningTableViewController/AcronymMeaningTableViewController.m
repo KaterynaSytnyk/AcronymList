@@ -1,18 +1,18 @@
 //
-//  AcronymListViewController.m
+//  AcronymMeaningTableViewController.m
 //  AcronymList
 //
 //  Created by Kateryna Sytnyk on 12/16/15.
 //  Copyright © 2015 KaterynaSytnyk. All rights reserved.
 //
 
-#import "AcronymListViewController.h"
+#import "AcronymMeaningTableViewController.h"
 
-@interface AcronymListViewController ()
+@interface AcronymMeaningTableViewController ()
 
 @end
 
-@implementation AcronymListViewController
+@implementation AcronymMeaningTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
