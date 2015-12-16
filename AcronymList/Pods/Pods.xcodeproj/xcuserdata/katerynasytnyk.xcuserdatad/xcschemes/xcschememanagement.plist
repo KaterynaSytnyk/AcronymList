@@ -19,12 +19,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FastEasyMapping.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UIViewController-KeyboardAdditions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,12 +47,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>47199683E9D28429E8413FE02E7A2B09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>5EA94E3357CB6918D14CF6C129484928</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E1AFECCE2588D5C70170A71A3F754C5</key>
+		<key>939D939DF5CDD758DB6184C97339817C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE609AB60C692C3B31C9F1CFC5308B00</key>
 		<dict>
 			<key>primary</key>
 			<true/>

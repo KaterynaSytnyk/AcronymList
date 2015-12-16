@@ -31,18 +31,24 @@ PODS:
     - CocoaLumberjack/Core
   - CocoaLumberjack/Extensions (2.0.0):
     - CocoaLumberjack/Default
+  - FastEasyMapping (0.5.1)
   - MBProgressHUD (0.9.1)
+  - UIViewController-KeyboardAdditions (1.1)
 
 DEPENDENCIES:
   - AFNetworkActivityLogger (= 2.0.4)
   - AFNetworking (= 2.6.0)
   - CocoaLumberjack (= 2.0.0)
+  - FastEasyMapping (= 0.5.1)
   - MBProgressHUD (= 0.9.1)
+  - UIViewController-KeyboardAdditions (= 1.1)
 
 SPEC CHECKSUMS:
   AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   CocoaLumberjack: a6f77d987d65dc7ba86b0f84db7d0b9084f77bcb
+  FastEasyMapping: 03a3fbe3af1005e67974358a4ec2b4764f8aa3b4
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  UIViewController-KeyboardAdditions: 5db782fc55ec1e49a20caf80f8d4217f4032eaee
 
 COCOAPODS: 0.39.0
