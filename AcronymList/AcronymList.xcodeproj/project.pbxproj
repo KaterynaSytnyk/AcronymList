@@ -20,6 +20,8 @@
 		68DD84D01C22150C0050BA2C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84CF1C22150C0050BA2C /* NetworkManager.m */; };
 		68DD84D31C2215160050BA2C /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84D21C2215160050BA2C /* DataManager.m */; };
 		68DD84D71C2216E90050BA2C /* AcronymMeaningTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */; };
+		68DD84DC1C2217D10050BA2C /* Acronym.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84DB1C2217D10050BA2C /* Acronym.m */; };
+		68DD84DF1C2217DF0050BA2C /* AcronymMeaning.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84DE1C2217DF0050BA2C /* AcronymMeaning.m */; };
 		E62A627607693EC6B23C746F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501C010132FC8250A9AA9C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,10 @@
 		68DD84D21C2215160050BA2C /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		68DD84D51C2216E90050BA2C /* AcronymMeaningTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymMeaningTableViewController.h; sourceTree = "<group>"; };
 		68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymMeaningTableViewController.m; sourceTree = "<group>"; };
+		68DD84DA1C2217D10050BA2C /* Acronym.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acronym.h; sourceTree = "<group>"; };
+		68DD84DB1C2217D10050BA2C /* Acronym.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Acronym.m; sourceTree = "<group>"; };
+		68DD84DD1C2217DF0050BA2C /* AcronymMeaning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymMeaning.h; sourceTree = "<group>"; };
+		68DD84DE1C2217DF0050BA2C /* AcronymMeaning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymMeaning.m; sourceTree = "<group>"; };
 		CC22DEC8F0CB0A2FD0FAE132 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -203,6 +209,8 @@
 		68DD84BA1C2213C30050BA2C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				68DD84D91C2217C10050BA2C /* Acronym */,
+				68DD84D81C2217C10050BA2C /* AcronymMeaning */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +267,24 @@
 				68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */,
 			);
 			path = AcronymMeaningTableViewController;
+			sourceTree = "<group>";
+		};
+		68DD84D81C2217C10050BA2C /* AcronymMeaning */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84DD1C2217DF0050BA2C /* AcronymMeaning.h */,
+				68DD84DE1C2217DF0050BA2C /* AcronymMeaning.m */,
+			);
+			path = AcronymMeaning;
+			sourceTree = "<group>";
+		};
+		68DD84D91C2217C10050BA2C /* Acronym */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84DA1C2217D10050BA2C /* Acronym.h */,
+				68DD84DB1C2217D10050BA2C /* Acronym.m */,
+			);
+			path = Acronym;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,6 +468,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68DD84DC1C2217D10050BA2C /* Acronym.m in Sources */,
+				68DD84DF1C2217DF0050BA2C /* AcronymMeaning.m in Sources */,
 				68DD84D01C22150C0050BA2C /* NetworkManager.m in Sources */,
 				68DD84C71C2214E20050BA2C /* AppearanceManager.m in Sources */,
 				68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */,
