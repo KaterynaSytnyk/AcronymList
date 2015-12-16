@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppearanceManager.h"
+#import "LoggingManager.h"
 
 @interface AppDelegate ()
 
@@ -20,6 +21,7 @@
 
     
     [AppearanceManager setupAppearanceForApplication];
+    [[LoggingManager sharedManager] startLogging];
     
     return YES;
 }

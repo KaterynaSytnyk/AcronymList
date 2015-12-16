@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class Acronym;
+
 @interface ParsingManager : NSObject
 
 + (instancetype)sharedManager;
+
+- (NSDictionary *)dictionaryContainingInfoForAcronymSearch:(Acronym *)acronym;
+- (NSArray *)acronymMeaningsFromDictionary:(NSDictionary *)acronymMeaningsDictionary;
 
 @end

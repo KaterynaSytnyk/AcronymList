@@ -7,6 +7,9 @@
 //
 
 #import "ParsingManager.h"
+#import "FastEasyMapping.h"
+#import "Acronym.h"
+#import "AcronymMeaning.h"
 
 @interface ParsingManager ()
 
@@ -22,6 +25,7 @@
     });
     return sharedManager;
 }
+
 
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "LoggingManager.h"
+#import "AFNetworkActivityLogger.h"
 
 @interface LoggingManager ()
 
@@ -24,5 +25,13 @@
     return sharedManager;
 }
 
+
+- (void)startLogging {
+    [[AFNetworkActivityLogger sharedLogger] startLogging];
+    [AFNetworkActivityLogger sharedLogger].level = AFLoggerLevelError;
+ 
+    
+    //KS: TODO - add more logging using CocoaLumberjack or CleanRoomLogger
+}
 
 @end
