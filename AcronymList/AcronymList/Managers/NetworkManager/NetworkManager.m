@@ -8,6 +8,22 @@
 
 #import "NetworkManager.h"
 
+@interface NetworkManager ()
+
+@end
+
 @implementation NetworkManager
+
+
++ (instancetype)sharedManager {
+    static NetworkManager *sharedManager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        sharedManager = [NetworkManager new];
+    });
+    return sharedManager;
+}
+
+
 
 @end

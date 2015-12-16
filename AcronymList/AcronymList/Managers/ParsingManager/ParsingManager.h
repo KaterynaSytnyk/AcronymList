@@ -10,4 +10,6 @@
 
 @interface ParsingManager : NSObject
 
++ (instancetype)sharedManager;
+
 @end

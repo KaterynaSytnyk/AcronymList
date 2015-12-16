@@ -10,4 +10,6 @@
 
 @interface DataManager : NSObject
 
++ (instancetype)sharedManager;
+
 @end

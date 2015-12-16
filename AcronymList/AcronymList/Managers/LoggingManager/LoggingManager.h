@@ -10,4 +10,6 @@
 
 @interface LoggingManager : NSObject
 
++ (instancetype)sharedManager;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface NetworkManager : NSObject
 
++ (instancetype)sharedManager;
+
 @end
