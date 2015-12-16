@@ -29,6 +29,7 @@
 		68DD84F91C2220260050BA2C /* Proxima_Nova_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84F61C2220260050BA2C /* Proxima_Nova_Bold.otf */; };
 		68DD84FA1C2220260050BA2C /* Proxima_Nova_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84F71C2220260050BA2C /* Proxima_Nova_Light.otf */; };
 		68DD84FB1C2220260050BA2C /* Proxima_Nova_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84F81C2220260050BA2C /* Proxima_Nova_Regular.otf */; };
+		68DD85031C222D4E0050BA2C /* GlobalLocalizations.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD85021C222D4E0050BA2C /* GlobalLocalizations.m */; };
 		E62A627607693EC6B23C746F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501C010132FC8250A9AA9C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +94,9 @@
 		68DD84F61C2220260050BA2C /* Proxima_Nova_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Proxima_Nova_Bold.otf; sourceTree = "<group>"; };
 		68DD84F71C2220260050BA2C /* Proxima_Nova_Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Proxima_Nova_Light.otf; sourceTree = "<group>"; };
 		68DD84F81C2220260050BA2C /* Proxima_Nova_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Proxima_Nova_Regular.otf; sourceTree = "<group>"; };
+		68DD85001C222D050050BA2C /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
+		68DD85011C222D4E0050BA2C /* GlobalLocalizations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalLocalizations.h; sourceTree = "<group>"; };
+		68DD85021C222D4E0050BA2C /* GlobalLocalizations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalLocalizations.m; sourceTree = "<group>"; };
 		CC22DEC8F0CB0A2FD0FAE132 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,6 +176,7 @@
 				68DD84B61C2213C30050BA2C /* ViewControllers */,
 				68DD84B91C2213C30050BA2C /* Managers */,
 				68DD84E61C22197C0050BA2C /* Categories */,
+				68DD84FC1C222CB40050BA2C /* Utility */,
 				68DD84831C220FFF0050BA2C /* Supporting Files */,
 			);
 			path = AcronymList;
@@ -396,6 +401,32 @@
 			path = Proxima;
 			sourceTree = "<group>";
 		};
+		68DD84FC1C222CB40050BA2C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				68DD84FD1C222CDA0050BA2C /* GlobalConstants */,
+				68DD84FE1C222CDA0050BA2C /* GlobalLocalizations */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		68DD84FD1C222CDA0050BA2C /* GlobalConstants */ = {
+			isa = PBXGroup;
+			children = (
+				68DD85001C222D050050BA2C /* GlobalConstants.h */,
+			);
+			path = GlobalConstants;
+			sourceTree = "<group>";
+		};
+		68DD84FE1C222CDA0050BA2C /* GlobalLocalizations */ = {
+			isa = PBXGroup;
+			children = (
+				68DD85011C222D4E0050BA2C /* GlobalLocalizations.h */,
+				68DD85021C222D4E0050BA2C /* GlobalLocalizations.m */,
+			);
+			path = GlobalLocalizations;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -587,6 +618,7 @@
 				68DD84EC1C2219AC0050BA2C /* NSString+Utility.m in Sources */,
 				68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */,
 				68DD84881C220FFF0050BA2C /* AppDelegate.m in Sources */,
+				68DD85031C222D4E0050BA2C /* GlobalLocalizations.m in Sources */,
 				68DD84D31C2215160050BA2C /* DataManager.m in Sources */,
 				68DD84EF1C2219BC0050BA2C /* UIColor+Utility.m in Sources */,
 				68DD84E51C22187E0050BA2C /* AcronymMeaningTableViewCell.m in Sources */,
