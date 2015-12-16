@@ -13,7 +13,7 @@
 @implementation AppearanceManager
 
 + (void)setupAppearanceForApplication {
- //   [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor darkGrayColor]];
+    [[UITextField appearanceWhenContainedIn:[UISearchBar class], nil] setTintColor:[UIColor darkGrayColor]];
 }
 
 @end
