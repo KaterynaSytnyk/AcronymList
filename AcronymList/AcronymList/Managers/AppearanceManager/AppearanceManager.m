@@ -13,7 +13,7 @@
 @implementation AppearanceManager
 
 + (void)setupAppearanceForApplication {
-    [[UITextField appearanceWhenContainedInInstancesOfClasses:[NSArray arrayWithObject:[UISearchBar class]]] setTintColor:[UIColor darkGrayColor]];
+    [[UITextField appearanceWhenContainedInInstancesOfClasses:[NSArray arrayWithObject:[UISearchBar class]]] setTintColor:[UIColor orangeColor]];
 }
 
 @end

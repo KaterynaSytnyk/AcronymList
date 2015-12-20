@@ -36,15 +36,14 @@ static CGFloat const CellHeight = 62;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    Acronym *acronym = [[Acronym alloc] initWithAcronymString:@"HMM"];
-    [self searchAcronymMeaningsWithAcronym:acronym];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
     [self ka_startObservingKeyboardNotifications];
+    [self.searchBar becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -70,10 +69,11 @@ static CGFloat const CellHeight = 62;
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
     [searchBar resignFirstResponder];
     
-    //    NSString *searchString = self.searchTextField.text;
-    //    Acronym *acronym = [[Acronym alloc] initWithAcronymString:searchString];
-    //    [self searchAcronymMeaningsWithAcronym:acronym];
+    NSString *searchString = searchBar.text;
+    Acronym *acronym = [[Acronym alloc] initWithAcronymString:searchString];
+    [self searchAcronymMeaningsWithAcronym:acronym];
 }
+
 
 
 #pragma mark - Loading Data
@@ -95,9 +95,6 @@ static CGFloat const CellHeight = 62;
         [weakSelf showAlertWithLocalizedTitle:nil localizedMessage:localizedErrorMessage];
     }];
 }
-
-#pragma mark - Actions
-
 
 
 #pragma mark - UITableViewDataSource

@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="h3U-v5-dcD">
-                                <rect key="frame" x="0.0" y="60" width="320" height="508"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AcronymMeaningTableViewCellReuseIdentifier" rowHeight="62" id="ybK-Rj-aDP" customClass="AcronymMeaningTableViewCell">
@@ -80,10 +80,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mAo-2z-0t0" userLabel="search text field backgroudn view">
-                                <rect key="frame" x="0.0" y="20" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <subviews>
-                                    <searchBar contentMode="redraw" prompt="Search For Acronym Meanings" placeholder="Enter Acronym" translatesAutoresizingMaskIntoConstraints="NO" id="OVn-ih-mtr">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                    <searchBar contentMode="redraw" placeholder="Enter Acronym" translatesAutoresizingMaskIntoConstraints="NO" id="OVn-ih-mtr">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <outlet property="delegate" destination="0gm-ZY-bFT" id="XDR-QL-lcf"/>
@@ -93,7 +93,7 @@
                                 <color key="backgroundColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="OVn-ih-mtr" firstAttribute="leading" secondItem="mAo-2z-0t0" secondAttribute="leading" id="D2d-Zz-JOh"/>
-                                    <constraint firstAttribute="height" constant="40" id="HQ3-iY-rWh"/>
+                                    <constraint firstAttribute="height" constant="44" id="HQ3-iY-rWh"/>
                                     <constraint firstItem="OVn-ih-mtr" firstAttribute="top" secondItem="mAo-2z-0t0" secondAttribute="top" id="MjJ-nr-vy7"/>
                                     <constraint firstAttribute="trailing" secondItem="OVn-ih-mtr" secondAttribute="trailing" id="bd7-Rk-xM0"/>
                                     <constraint firstAttribute="bottom" secondItem="OVn-ih-mtr" secondAttribute="bottom" id="yaq-Pc-Oi0"/>
