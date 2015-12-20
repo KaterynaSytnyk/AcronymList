@@ -23,6 +23,7 @@ static NSString *const AcronymSearchResource = @"dictionary.py";
 
 @property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
 @property (copy, nonatomic) NSString *localizedAcronymSearchErrorMessage;
+@property (copy, nonatomic) NSString *localizedAcronymSearchNoResultsMessage;
 
 @end
 
@@ -50,6 +51,7 @@ static NSString *const AcronymSearchResource = @"dictionary.py";
 
 - (void)localizeStrings {
     self.localizedAcronymSearchErrorMessage = NSLocalizedString(@"Acronym search failed. Please try again.", @"Error message for the case when acronym meanings search fails.");
+    self.localizedAcronymSearchNoResultsMessage = NSLocalizedString(@"Acronym search returned no results. Please try again.", @"Error message for the case when acronym meanings search returned no results.");
 }
 
 #pragma mark - Data
@@ -75,14 +77,21 @@ static NSString *const AcronymSearchResource = @"dictionary.py";
         
         if (![serializedFirstObject isKindOfClass:[NSDictionary class]]) {
             if (errorHandler) {
-                errorHandler(weakSelf.localizedAcronymSearchErrorMessage);
+                errorHandler(weakSelf.localizedAcronymSearchNoResultsMessage);
             }
             return;
         }
         
         NSArray *acronymMeanings = [[ParsingManager sharedManager] acronymMeaningsArrayFromDictionary:serializedFirstObject];
         
-        if (acronymMeanings && successHandler) {
+        if (!acronymMeanings) {
+            if (errorHandler) {
+                errorHandler(weakSelf.localizedAcronymSearchNoResultsMessage);
+            }
+            return;
+        }
+        
+        if (successHandler) {
             successHandler(acronymMeanings);
         }
         
