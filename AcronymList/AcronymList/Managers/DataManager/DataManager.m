@@ -39,7 +39,9 @@ static NSString *const AcronymSearchResource = @"dictionary.py";
         NSURL *baseURL = [NSURL URLWithString:BaseServerURLString];
         sharedManager.sessionManager = [[AFHTTPSessionManager alloc] initWithBaseURL:baseURL];
         sharedManager.sessionManager.requestSerializer = [AFJSONRequestSerializer new];
-        sharedManager.sessionManager.responseSerializer = [AFJSONResponseSerializer new];
+        sharedManager.sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        
+        [sharedManager localizeStrings];
     });
     return sharedManager;
 }
@@ -68,13 +70,17 @@ static NSString *const AcronymSearchResource = @"dictionary.py";
     
     [self.sessionManager GET:AcronymSearchResource parameters:params success:^(NSURLSessionDataTask *task, id responseObject) {
         
-        if (![responseObject isKindOfClass:[NSDictionary class]]) {
+        NSArray *serializedData = [NSJSONSerialization JSONObjectWithData:responseObject options:kNilOptions error:nil];
+        id serializedFirstObject = serializedData.firstObject;
+        
+        if (![serializedFirstObject isKindOfClass:[NSDictionary class]]) {
             if (errorHandler) {
                 errorHandler(weakSelf.localizedAcronymSearchErrorMessage);
             }
+            return;
         }
         
-        NSArray *acronymMeanings = [[ParsingManager sharedManager] acronymMeaningsArrayFromDictionary:responseObject];
+        NSArray *acronymMeanings = [[ParsingManager sharedManager] acronymMeaningsArrayFromDictionary:serializedFirstObject];
         
         if (acronymMeanings && successHandler) {
             successHandler(acronymMeanings);
