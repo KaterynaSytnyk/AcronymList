@@ -11,6 +11,8 @@
 #import "Acronym.h"
 #import "DataManager.h"
 #import "MBProgressHUD.h"
+#import "AcronymMeaningTableViewCell.h"
+#import "GlobalLocalizations.h"
 
 static NSString *const ReusableCellIndentifier = @"AcronymMeaningTableViewCellReuseIdentifier";
 static CGFloat const CellHeight = 62;
@@ -50,7 +52,7 @@ static CGFloat const CellHeight = 62;
         
     } errorHandler:^(NSString *localizedErrorMessage) {
         [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
-        
+        [weakSelf showAlertWithLocalizedTitle:nil localizedMessage:localizedErrorMessage];
     }];
 }
 
@@ -59,6 +61,20 @@ static CGFloat const CellHeight = 62;
 
 
 #pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.acronymMeanings.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    AcronymMeaningTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:ReusableCellIndentifier forIndexPath:indexPath];
+    
+    
+    AcronymMeaning *acronymMeaning = self.acronymMeanings[indexPath.row];
+    [cell configureWithAcronymMeaning:acronymMeaning];
+    
+    return cell;
+}
 
 
 
@@ -72,6 +88,18 @@ static CGFloat const CellHeight = 62;
     return [self tableView:tableView heightForRowAtIndexPath:indexPath];
 }
 
+#pragma mark - Utility
 
+- (void)showAlertWithLocalizedTitle:(NSString *)localizedTitle localizedMessage:(NSString *)localizedMessage {
+    
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:localizedTitle
+                                                                   message:localizedMessage
+                                                            preferredStyle:(UIAlertControllerStyleAlert)];
+    
+    [alert addAction:[UIAlertAction actionWithTitle:[GlobalLocalizations localizedGlobalOk]
+                                              style:(UIAlertActionStyleDefault) handler:nil]];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
 
 @end

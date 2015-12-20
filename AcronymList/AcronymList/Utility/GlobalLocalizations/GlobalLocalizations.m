@@ -27,4 +27,9 @@
     return NSLocalizedString(@"Oops, an unexpected error has occurred.", "Error message for internet operation");
 }
 
++ (NSString *)localizedGlobalOk {
+    return NSLocalizedString(@"Ok", @"String for global use throughout the application");
+}
+
+
 @end

@@ -14,5 +14,6 @@
 + (NSString *)localizedGlobalConnectionLost;
 + (NSString *)localizedGlobalNoInternet;
 + (NSString *)localizedGlobalErrorHasOccurredPleaseTryAgain;
++ (NSString *)localizedGlobalOk;
 
 @end
