@@ -17,9 +17,7 @@
 		68DD84C71C2214E20050BA2C /* AppearanceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84C61C2214E20050BA2C /* AppearanceManager.m */; };
 		68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84C91C2214F00050BA2C /* LoggingManager.m */; };
 		68DD84CD1C2215010050BA2C /* ParsingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84CC1C2215010050BA2C /* ParsingManager.m */; };
-		68DD84D01C22150C0050BA2C /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84CF1C22150C0050BA2C /* NetworkManager.m */; };
 		68DD84D31C2215160050BA2C /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84D21C2215160050BA2C /* DataManager.m */; };
-		68DD84D71C2216E90050BA2C /* AcronymMeaningTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */; };
 		68DD84DC1C2217D10050BA2C /* Acronym.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84DB1C2217D10050BA2C /* Acronym.m */; };
 		68DD84DF1C2217DF0050BA2C /* AcronymMeaning.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84DE1C2217DF0050BA2C /* AcronymMeaning.m */; };
 		68DD84E51C22187E0050BA2C /* AcronymMeaningTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD84E41C22187E0050BA2C /* AcronymMeaningTableViewCell.m */; };
@@ -30,6 +28,7 @@
 		68DD84FA1C2220260050BA2C /* Proxima_Nova_Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84F71C2220260050BA2C /* Proxima_Nova_Light.otf */; };
 		68DD84FB1C2220260050BA2C /* Proxima_Nova_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68DD84F81C2220260050BA2C /* Proxima_Nova_Regular.otf */; };
 		68DD85031C222D4E0050BA2C /* GlobalLocalizations.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD85021C222D4E0050BA2C /* GlobalLocalizations.m */; };
+		68DD85351C2743C70050BA2C /* AcronymMeaningSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68DD85341C2743C70050BA2C /* AcronymMeaningSearchViewController.m */; };
 		E62A627607693EC6B23C746F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5501C010132FC8250A9AA9C9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -73,12 +72,8 @@
 		68DD84C91C2214F00050BA2C /* LoggingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoggingManager.m; sourceTree = "<group>"; };
 		68DD84CB1C2215010050BA2C /* ParsingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParsingManager.h; sourceTree = "<group>"; };
 		68DD84CC1C2215010050BA2C /* ParsingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParsingManager.m; sourceTree = "<group>"; };
-		68DD84CE1C22150C0050BA2C /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
-		68DD84CF1C22150C0050BA2C /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		68DD84D11C2215160050BA2C /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		68DD84D21C2215160050BA2C /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		68DD84D51C2216E90050BA2C /* AcronymMeaningTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymMeaningTableViewController.h; sourceTree = "<group>"; };
-		68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymMeaningTableViewController.m; sourceTree = "<group>"; };
 		68DD84DA1C2217D10050BA2C /* Acronym.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Acronym.h; sourceTree = "<group>"; };
 		68DD84DB1C2217D10050BA2C /* Acronym.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Acronym.m; sourceTree = "<group>"; };
 		68DD84DD1C2217DF0050BA2C /* AcronymMeaning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymMeaning.h; sourceTree = "<group>"; };
@@ -97,6 +92,8 @@
 		68DD85001C222D050050BA2C /* GlobalConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalConstants.h; sourceTree = "<group>"; };
 		68DD85011C222D4E0050BA2C /* GlobalLocalizations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalLocalizations.h; sourceTree = "<group>"; };
 		68DD85021C222D4E0050BA2C /* GlobalLocalizations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalLocalizations.m; sourceTree = "<group>"; };
+		68DD85331C2743C70050BA2C /* AcronymMeaningSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcronymMeaningSearchViewController.h; sourceTree = "<group>"; };
+		68DD85341C2743C70050BA2C /* AcronymMeaningSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AcronymMeaningSearchViewController.m; sourceTree = "<group>"; };
 		CC22DEC8F0CB0A2FD0FAE132 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,7 +212,7 @@
 		68DD84B61C2213C30050BA2C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				68DD84D41C2216E90050BA2C /* AcronymMeaningTableViewController */,
+				68DD85321C2743C70050BA2C /* AcronymMeaningSearchViewController */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -226,7 +223,6 @@
 				68DD84C01C2214C80050BA2C /* AppearanceManager */,
 				68DD84C11C2214C80050BA2C /* LoggingManager */,
 				68DD84C21C2214C80050BA2C /* ParsingManager */,
-				68DD84C31C2214C80050BA2C /* NetworkManager */,
 				68DD84C41C2214C80050BA2C /* DataManager */,
 			);
 			path = Managers;
@@ -268,15 +264,6 @@
 			path = ParsingManager;
 			sourceTree = "<group>";
 		};
-		68DD84C31C2214C80050BA2C /* NetworkManager */ = {
-			isa = PBXGroup;
-			children = (
-				68DD84CE1C22150C0050BA2C /* NetworkManager.h */,
-				68DD84CF1C22150C0050BA2C /* NetworkManager.m */,
-			);
-			path = NetworkManager;
-			sourceTree = "<group>";
-		};
 		68DD84C41C2214C80050BA2C /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,15 +271,6 @@
 				68DD84D21C2215160050BA2C /* DataManager.m */,
 			);
 			path = DataManager;
-			sourceTree = "<group>";
-		};
-		68DD84D41C2216E90050BA2C /* AcronymMeaningTableViewController */ = {
-			isa = PBXGroup;
-			children = (
-				68DD84D51C2216E90050BA2C /* AcronymMeaningTableViewController.h */,
-				68DD84D61C2216E90050BA2C /* AcronymMeaningTableViewController.m */,
-			);
-			path = AcronymMeaningTableViewController;
 			sourceTree = "<group>";
 		};
 		68DD84D81C2217C10050BA2C /* AcronymMeaning */ = {
@@ -425,6 +403,15 @@
 				68DD85021C222D4E0050BA2C /* GlobalLocalizations.m */,
 			);
 			path = GlobalLocalizations;
+			sourceTree = "<group>";
+		};
+		68DD85321C2743C70050BA2C /* AcronymMeaningSearchViewController */ = {
+			isa = PBXGroup;
+			children = (
+				68DD85331C2743C70050BA2C /* AcronymMeaningSearchViewController.h */,
+				68DD85341C2743C70050BA2C /* AcronymMeaningSearchViewController.m */,
+			);
+			path = AcronymMeaningSearchViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,16 +600,15 @@
 			files = (
 				68DD84DC1C2217D10050BA2C /* Acronym.m in Sources */,
 				68DD84DF1C2217DF0050BA2C /* AcronymMeaning.m in Sources */,
-				68DD84D01C22150C0050BA2C /* NetworkManager.m in Sources */,
 				68DD84C71C2214E20050BA2C /* AppearanceManager.m in Sources */,
 				68DD84EC1C2219AC0050BA2C /* NSString+Utility.m in Sources */,
+				68DD85351C2743C70050BA2C /* AcronymMeaningSearchViewController.m in Sources */,
 				68DD84CA1C2214F00050BA2C /* LoggingManager.m in Sources */,
 				68DD84881C220FFF0050BA2C /* AppDelegate.m in Sources */,
 				68DD85031C222D4E0050BA2C /* GlobalLocalizations.m in Sources */,
 				68DD84D31C2215160050BA2C /* DataManager.m in Sources */,
 				68DD84EF1C2219BC0050BA2C /* UIColor+Utility.m in Sources */,
 				68DD84E51C22187E0050BA2C /* AcronymMeaningTableViewCell.m in Sources */,
-				68DD84D71C2216E90050BA2C /* AcronymMeaningTableViewController.m in Sources */,
 				68DD84CD1C2215010050BA2C /* ParsingManager.m in Sources */,
 				68DD84851C220FFF0050BA2C /* main.m in Sources */,
 				68DD84F21C2219CB0050BA2C /* UIFont+Utility.m in Sources */,

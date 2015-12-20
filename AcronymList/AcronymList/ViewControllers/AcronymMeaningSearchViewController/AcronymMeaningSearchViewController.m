@@ -1,40 +1,80 @@
 //
-//  AcronymMeaningTableViewController.m
+//  AcronymMeaningSearchViewController.m
 //  AcronymList
 //
 //  Created by Kateryna Sytnyk on 12/16/15.
 //  Copyright © 2015 KaterynaSytnyk. All rights reserved.
 //
 
-#import "AcronymMeaningTableViewController.h"
+#import "AcronymMeaningSearchViewController.h"
 #import "AcronymMeaning.h"
 #import "Acronym.h"
 #import "DataManager.h"
 #import "MBProgressHUD.h"
 #import "AcronymMeaningTableViewCell.h"
 #import "GlobalLocalizations.h"
+#import <UIViewController+KeyboardAdditions.h>
 
 static NSString *const ReusableCellIndentifier = @"AcronymMeaningTableViewCellReuseIdentifier";
 static CGFloat const CellHeight = 62;
 
-@interface AcronymMeaningTableViewController ()
+@interface AcronymMeaningSearchViewController () <UISearchBarDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) Acronym *acronym;
 @property (strong, nonatomic) NSArray *acronymMeanings;
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *tableViewBottomLayoutConstraint;
+
 
 @end
 
-@implementation AcronymMeaningTableViewController
+@implementation AcronymMeaningSearchViewController
 
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    Acronym *acronym = [[Acronym alloc] initWithAcronymString:@"FBI"];
+    Acronym *acronym = [[Acronym alloc] initWithAcronymString:@"HMM"];
     [self searchAcronymMeaningsWithAcronym:acronym];
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self ka_startObservingKeyboardNotifications];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self ka_stopObservingKeyboardNotifications];
+}
+
+#pragma mark - Keyboard Notifications
+
+- (void)ka_keyboardShowOrHideAnimationWithHeight:(CGFloat)height
+                               animationDuration:(NSTimeInterval)animationDuration
+                                  animationCurve:(UIViewAnimationCurve)animationCurve {
+    
+    //KS: adjust the bottom constraint of UITableView in order to show a UITableView above the keyboard
+    
+    self.tableViewBottomLayoutConstraint.constant = height;
+    [self.view layoutIfNeeded];
+}
+
+#pragma mark - UISearchBar delegate methods
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    
+    //    NSString *searchString = self.searchTextField.text;
+    //    Acronym *acronym = [[Acronym alloc] initWithAcronymString:searchString];
+    //    [self searchAcronymMeaningsWithAcronym:acronym];
+}
+
 
 #pragma mark - Loading Data
 
