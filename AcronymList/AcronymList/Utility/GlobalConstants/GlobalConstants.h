@@ -13,5 +13,6 @@ typedef void(^DefaultCompletionBlock)(void);
 typedef void(^DefaultSuccessHandler)(void);
 typedef void(^DefaultErrorHandler)(NSString *localizedErrorMessage);
 
+typedef void(^AcronymMeaningSearchSuccessHandler)(NSArray *acronymMeanings);
 
 #endif /* GlobalConstants_h */

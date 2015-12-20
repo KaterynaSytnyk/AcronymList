@@ -15,6 +15,8 @@
 + (instancetype)sharedManager;
 
 - (NSDictionary *)dictionaryContainingInfoForAcronymSearch:(Acronym *)acronym;
-- (NSArray *)acronymMeaningsFromDictionary:(NSDictionary *)acronymMeaningsDictionary;
+
+- (NSArray *)acronymMeaningsArrayFromDictionary:(NSDictionary *)acronymMeaningsListDictionary;
+
 
 @end

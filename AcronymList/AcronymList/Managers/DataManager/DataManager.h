@@ -7,9 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GlobalConstants.h"
+
+@class Acronym;
 
 @interface DataManager : NSObject
 
 + (instancetype)sharedManager;
+
+//KS: returns an array of AcronymMeanings from Acronym supplied
+- (void)searchAcronymMeaningsWithAcronym:(Acronym *)acronym
+                          successHandler:(AcronymMeaningSearchSuccessHandler)successHandler
+                            errorHandler:(DefaultErrorHandler)errorHandler;
 
 @end

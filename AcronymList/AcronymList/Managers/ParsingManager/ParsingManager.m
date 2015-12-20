@@ -26,6 +26,67 @@
     return sharedManager;
 }
 
+- (NSDictionary *)dictionaryContainingInfoForAcronymSearch:(Acronym *)acronym {
+    return [FEMSerializer serializeObject:acronym usingMapping:[self acronymMappingForMeaningsSearch]];
+}
+
+- (AcronymMeaning *)acronymMeaningFromDictionary:(NSDictionary *)acronymMeaningDictionary {
+    AcronymMeaning *acronymMeaning = [FEMObjectDeserializer deserializeObjectExternalRepresentation:acronymMeaningDictionary usingMapping:[self acronymMeaningMapping]];
+
+    return acronymMeaning;
+}
+
+- (NSArray *)acronymMeaningsArrayFromDictionary:(NSDictionary *)acronymMeaningsListDictionary {
+    if (!acronymMeaningsListDictionary) {
+        return nil;
+    }
+    
+    id objectToMap = nil;
+    
+    objectToMap = acronymMeaningsListDictionary[@"lfs"];
+    if ([objectToMap isKindOfClass:[NSArray class]]) {
+        
+        NSArray *acronymMeaningsArray = [self acronymMeaningsFromArray:objectToMap];
+        return acronymMeaningsArray;
+        
+    } else {
+        NSLog(@"Invalid data returned. Aborting.");
+        return nil;
+    }
+}
+
+- (NSArray *)acronymMeaningsFromArray:(NSArray *)acronymMeaningRawArray {
+    NSMutableArray *acronymMeanings = [NSMutableArray array];
+    for (NSDictionary *acronymMeaningDictionary in acronymMeaningRawArray) {
+        AcronymMeaning *acronymMeaning = [self acronymMeaningFromDictionary:acronymMeaningDictionary];
+        [acronymMeanings addObject:acronymMeaning];
+    }
+    return [NSArray arrayWithArray:acronymMeanings];
+}
+
+
+#pragma mark - Mappings
+
+
+- (FEMObjectMapping *)acronymMappingForMeaningsSearch {
+    return [FEMObjectMapping mappingForClass:[Acronym class] configuration:^(FEMObjectMapping *mapping) {
+        [mapping addAttributesFromDictionary:@{@"acronymString" : @"sf",
+                                               }];
+        
+    }];
+};
+
+- (FEMObjectMapping *)acronymMeaningMapping {
+    return [FEMObjectMapping mappingForClass:[AcronymMeaning class] configuration:^(FEMObjectMapping *mapping) {
+        [mapping addAttributesFromDictionary:@{@"fullName" : @"lf",
+                                               @"numberOfOccuranceString" : @"freq",
+                                               @"yearSinceString" : @"since"
+                                               }];
+        
+    }];
+};
+
+
 
 //[{"sf": "FBI",
 // "lfs": [{"lf": "Federal Bureau of Investigation",

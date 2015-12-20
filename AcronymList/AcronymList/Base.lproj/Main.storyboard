@@ -4,6 +4,15 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Proxima_Nova_Bold.otf">
+            <string>ProximaNova-Bold</string>
+        </mutableArray>
+        <mutableArray key="Proxima_Nova_Regular.otf">
+            <string>ProximaNova-Regular</string>
+            <string>ProximaNova-Regular</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Acronym Meaning Table View Controller-->
         <scene sceneID="2kd-XI-gnU">
@@ -19,13 +28,48 @@
                             <color key="backgroundColor" red="1" green="0.91369803959999996" blue="0.58635183359999998" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AcronymMeaningTableViewCellReuseIdentifier" id="iJn-hA-quh" customClass="AcronymMeaningTableViewCell">
-                                <rect key="frame" x="0.0" y="130" width="320" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="AcronymMeaningTableViewCellReuseIdentifier" rowHeight="62" id="iJn-hA-quh" customClass="AcronymMeaningTableViewCell">
+                                <rect key="frame" x="0.0" y="130" width="320" height="62"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iJn-hA-quh" id="AvL-bZ-dbi">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="61.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acronym Meaning Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VEr-tN-RNr">
+                                            <rect key="frame" x="10" y="5" width="295" height="21"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Bold" family="Proxima Nova" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Occurrence:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-ST-QDs">
+                                            <rect key="frame" x="10" y="38" width="81" height="18.5"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Since:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="muf-Rg-mXq">
+                                            <rect key="frame" x="270" y="38" width="40" height="18.5"/>
+                                            <fontDescription key="fontDescription" name="ProximaNova-Regular" family="Proxima Nova" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="muf-Rg-mXq" secondAttribute="trailing" constant="10" id="2WG-5G-P6g"/>
+                                        <constraint firstItem="muf-Rg-mXq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="UzD-ST-QDs" secondAttribute="trailing" constant="10" id="GxF-7p-bBo"/>
+                                        <constraint firstAttribute="bottom" secondItem="UzD-ST-QDs" secondAttribute="bottom" constant="5" id="RvG-G1-Hs6"/>
+                                        <constraint firstAttribute="trailing" secondItem="VEr-tN-RNr" secondAttribute="trailing" constant="15" id="WVu-8h-7bN"/>
+                                        <constraint firstAttribute="bottom" secondItem="muf-Rg-mXq" secondAttribute="bottom" constant="5" id="g2a-en-cFp"/>
+                                        <constraint firstItem="VEr-tN-RNr" firstAttribute="leading" secondItem="AvL-bZ-dbi" secondAttribute="leading" constant="10" id="nxp-Aj-V4g"/>
+                                        <constraint firstItem="VEr-tN-RNr" firstAttribute="top" secondItem="AvL-bZ-dbi" secondAttribute="top" constant="5" id="rBZ-J4-aOU"/>
+                                        <constraint firstItem="UzD-ST-QDs" firstAttribute="leading" secondItem="AvL-bZ-dbi" secondAttribute="leading" constant="10" id="xVg-L0-BGa"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="acronymMeaningLabel" destination="VEr-tN-RNr" id="olM-Xz-9w0"/>
+                                    <outlet property="occurrenceLabel" destination="UzD-ST-QDs" id="2YN-mB-7P9"/>
+                                    <outlet property="sinceLabel" destination="muf-Rg-mXq" id="1ZL-Lj-6vS"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,7 +81,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9o-uX-J30" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="234" y="359"/>
+            <point key="canvasLocation" x="68" y="267"/>
         </scene>
     </scenes>
 </document>

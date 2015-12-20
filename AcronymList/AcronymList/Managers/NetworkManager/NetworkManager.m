@@ -7,14 +7,17 @@
 //
 
 #import "NetworkManager.h"
+#import <AFHTTPSessionManager.h>
 
 @interface NetworkManager ()
+
+@property (strong, nonatomic) AFHTTPSessionManager *sessionManager;
 
 @end
 
 @implementation NetworkManager
 
-
+#pragma mark - Initialization
 + (instancetype)sharedManager {
     static NetworkManager *sharedManager = nil;
     static dispatch_once_t onceToken;
@@ -24,6 +27,7 @@
     return sharedManager;
 }
 
+#pragma mark - Loading from Network
 
 
 @end

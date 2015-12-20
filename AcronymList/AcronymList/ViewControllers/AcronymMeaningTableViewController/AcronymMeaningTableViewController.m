@@ -9,6 +9,8 @@
 #import "AcronymMeaningTableViewController.h"
 #import "AcronymMeaning.h"
 #import "Acronym.h"
+#import "DataManager.h"
+#import "MBProgressHUD.h"
 
 static NSString *const ReusableCellIndentifier = @"AcronymMeaningTableViewCellReuseIdentifier";
 static CGFloat const CellHeight = 62;
@@ -23,10 +25,41 @@ static CGFloat const CellHeight = 62;
 
 @implementation AcronymMeaningTableViewController
 
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
+    Acronym *acronym = [[Acronym alloc] initWithAcronymString:@"FBI"];
+    [self searchAcronymMeaningsWithAcronym:acronym];
 }
+
+#pragma mark - Loading Data
+
+- (void)searchAcronymMeaningsWithAcronym:(Acronym *)acronym {
+    
+    __weak typeof(self) weakSelf = self;
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    [[DataManager sharedManager] searchAcronymMeaningsWithAcronym:acronym successHandler:^(NSArray *acronymMeanings) {
+        
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        weakSelf.acronymMeanings = acronymMeanings;
+        [weakSelf.tableView reloadData];
+        
+    } errorHandler:^(NSString *localizedErrorMessage) {
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+        
+    }];
+}
+
+#pragma mark - Actions
+
+
+
+#pragma mark - UITableViewDataSource
+
 
 
 #pragma mark - UITableViewDelegate

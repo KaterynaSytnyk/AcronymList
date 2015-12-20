@@ -7,7 +7,19 @@
 //
 
 #import "Acronym.h"
+#import "NSString+Utility.h"
 
 @implementation Acronym
+
+- (instancetype)initWithAcronymString:(NSString *)acronymString {
+    self = [super init];
+    
+    if (self) {
+        self.acronymString = [acronymString ac_trimmedOfWhitespace];
+    }
+    
+    return self;
+}
+
 
 @end

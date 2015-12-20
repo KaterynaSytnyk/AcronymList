@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class AcronymMeaning;
+
 @interface AcronymMeaningTableViewCell : UITableViewCell
+
+- (void)configureWithAcronymMeaning:(AcronymMeaning *)acronymMeaning;
 
 @end
