@@ -12,8 +12,8 @@ Technical Details
  
 1. Use the API available here to get the meanings for an acronym/initialism:   • http://www.nactem.ac.uk/software/acromine/rest.html 
 2. Project must conform to these parameters: 
-• Project must be in Xcode 6 
-• Project must be written in Objective-C 
-• Project must use AFNetworking 2.0 for networking https://github.com/AFNetworking/AFNetworking 
-• Project must use MBProgressHUD for wait indication https://github.com/jdg/MBProgressHUD 
+* Project must be in Xcode 6 
+* Project must be written in Objective-C 
+* Project must use AFNetworking 2.0 for networking https://github.com/AFNetworking/AFNetworking 
+* Project must use MBProgressHUD for wait indication https://github.com/jdg/MBProgressHUD 
 3. When complete, the project must be posted to Github for review.
