@@ -3,8 +3,9 @@
 Goal:
  
 Create a simple app to look up the meanings of acronyms/initialisms. 
+
 Functional Acceptance Criteria
- 
+
 1. User can enter an acronym or initialism 
 2. User is then presented with a list of corresponding meanings 
  
